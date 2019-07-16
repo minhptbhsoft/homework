@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="homework.css">
+
+    <script language="javascript">
+        function killCopy(e) {
+            return false
+        }
+        function reEnable() {
+            return true
+        }
+        document.onselectstart = new Function('return false')
+        if (window.sidebar) {
+            document.onmousedown = killCopy
+            document.onclick = reEnable
+        }
+        function abc() {
+            alert("Your comment has been saved!");
+        };
+        window.onload = function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function (e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="all">
+        <div class="menu">
+            <a class="options" href="#define_game">Infor Game</a>
+            <a class="options" href="#interest">It is interesting</a>
+
+            <a class="options" href="#play">Let's play</a>
+            <a class="options" href="#comment">Comment Game</a>
+        </div>
+        <div class="banner"></div>
+        <div class="main-content">
+            <div style="    float: left;" class="left-side">
+                <img class="img-side" src="./left-side.jpg" alt="">
+            </div>
+            <div style="    float: right;" class="left-side">
+                <img class="img-side" src="./right-side.jpg" alt="">
+            </div>
+            <div class="avatar">
+                <img class="img-avatar" src="./0e84c721484c49eb8d73afba07081405.pearlsquare.jpg" alt="">
+            </div>
+            <div class="content1">
+                <div id="define_game"></div>
+                <img style="float: left" class="img-content" src="./content1.jpg" alt="">
+                <div style="float: right" class="content1-1">
+                    <h1 class="font-title">What is this game?</h1>
+                    <p class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+                        in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                        quo voluptas nulla pariatur?
+                    </p>
+                </div>
+            </div>
+            <div class="content1">
+
+                <div style="float: left" class="content1-1">
+                    <div id="interest"></div>
+                    <h1 class="font-title">Why is it INTERSETING?</h1>
+                    <p class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt explicabo.
+                        <br>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                        laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                        <br>
+                        Quis autem vel eum iure reprehenderit qui
+                        in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                        quo voluptas nulla pariatur?
+                    </p>
+                </div>
+                <img style="float: right" class="img-content" src="./content2.jpg" alt="">
+            </div>
+            <div class="content1">
+
+                <div style="float: right" class="content1-1">
+                    <div id="play"></div>
+                    <h1 class="font-title">How to PLAY this game?</h1>
+                    <p class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <img style="float: left" class="img-content" src="./content3.jpg" alt="">s
+            </div>
+            <div class="content1">
+                <div id="comment"></div>
+                <img style="float: right" class="img-content" src="./content4.jpg" alt="">
+                <div style="float: left" class="content1-1">
+                    <h1 class="font-title">Leave your comment here!</h1>
+                    <form action="">
+                        <label for="fname">Họ Và Tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên...">
+
+                        <label for="lname">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Nhập email...">
+
+                        <label for="country">Số Điện Thoại</label>
+                        <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại...">
+
+                        <label for="address">Địa Chỉ</label>
+                        <input type="text" id="address" name="address" placeholder="Nhập địa chỉ...">
+                        <button id="submit" type="button" onclick="abc()">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="footer">
+                <span class="title italic-font" style="color: white;"><strong>I DONE THIS BY MY SELF</strong></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
